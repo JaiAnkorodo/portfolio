@@ -168,11 +168,12 @@
   font-size: 22px;
   font-weight: 300;
   letter-spacing: 2px;
+  font-family: "Geist", sans-serif;
 }
 
 .landing-intro h1 {
   margin: 0;
-  letter-spacing: 2px;
+  letter-spacing: 0.1px;
   font-size: 28px;
   line-height: 28px;
   font-weight: 500;

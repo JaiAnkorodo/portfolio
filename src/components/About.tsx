@@ -6,9 +6,11 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          I am Asep, i actively participate in various online classes to improve
+          my technical skills and add soft skills relevant to the industry. This
+          portfolio reflects my journey in understanding more deeply the world
+          of telecommunications, while continuing to adapt to the latest
+          technological developments.
         </p>
       </div>
     </div>

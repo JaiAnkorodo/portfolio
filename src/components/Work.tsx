@@ -6,9 +6,35 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
+const projects = [
+  { name: "AJTics", client: "Revo U", tools: "Javascript, HTML, CSS" },
+  {
+    name: "Generate Password",
+    client: "Dicoding Indonesia",
+    tools: "HTML, Javascripts, CSS",
+  },
+  { name: "Furniture", client: "Revo U", tools: "HTML, CSS, Javascripts" },
+  {
+    name: "Booksepp",
+    client: "Dicoding Indonesia",
+    tools: "Javascripts, HTML, CSS",
+  },
+  {
+    name: "NetNibbles",
+    client: "Projek Adaptive Network Laboratory",
+    tools: "Bootstrap, Django, MySQL",
+  },
+  {
+    name: "Dashboard Admin",
+    client: "IEEE Telkom University",
+    tools: "Typerscripts, React, TailwindCSS",
+  },
+];
+
 const Work = () => {
   useGSAP(() => {
     let translateX: number = 0;
+
     function setTranslateX() {
       const box = document.getElementsByClassName("work-box");
       const rectLeft = document
@@ -41,6 +67,7 @@ const Work = () => {
       delay: 0.2,
     });
   }, []);
+
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
@@ -48,21 +75,23 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {projects.map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
-
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{project.name}</h4>
+                    <p>{project.client}</p>
                   </div>
                 </div>
                 <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+                <p>{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <WorkImage
+                image={`/images/project-${index + 1}.webp`}
+                alt={project.name}
+              />
             </div>
           ))}
         </div>
